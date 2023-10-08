@@ -1,6 +1,7 @@
 body {
-    margin: 0 auto;
+    margin: auto;
     width: 600px;
+    font-family: Smythe, sans-serif;
 }
 
 header {
@@ -10,23 +11,118 @@ header {
     background-position: center -163px;
 }
 
+main {
+    width: 500px;
+    margin: auto;
+}
+
 h1 {
-    margin-top: 0px;
     color: #FFF;
-    font-family: Smythe;
-    font-size: 39px;
     font-weight: 400;
     line-height: 24px; /* 61.538% */
 }
 
 h2 {
     color: #FFF;
-    font-family: Smythe;
     font-size: 22.422px;
     font-weight: 400;
     line-height: 13.798px; /* 61.538% */
 }
 
+h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+p {
+    color: #8B8B8B;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+.add-item-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid lightgray;
+    background-color: transparent;
+    font-size: 32px;
+}
+
 .title {
     padding: 46px 0px 0px 46px
+}
+
+.emoji {
+    font-size: 64px;
+}
+
+.item-container {
+    margin: 25px auto;
+    padding-bottom: 35px;
+    width: 500px;
+    border-bottom: 2px solid lightgray;
+}
+
+.item-holder {
+    border-bottom: 2px solid gray;
+    padding-bottom: 15px;
+}
+
+.order-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.margin-right {
+    margin-right: auto;
+}
+
+.total-price {
+    margin-top: 10px;
+}
+
+.order-button {
+    color: var(--white, #FFF);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    border: none;
+    padding: 18px 175px;
+    border-radius: 3px;
+    background: #16DB99;
+    margin-top: 10px;
+}
+
+.billing-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 420px;
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px 50px lightgray;
+    background-color: white;
+}
+
+/* Flex Container */
+.total-price,
+.item-holder,
+.item-container {
+    display: flex;
+    justify-content: space-between;
 }
