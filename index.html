@@ -1,11 +1,14 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jimmy's Diner</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
-
     </head>
     <body>
         <header>
@@ -16,14 +19,10 @@
         </header>
         <main>
             <div id="menu"></div>
-            <div id="checkout"></div>
-            <div id="billing"></div>
-            <div id="confirmation"></div>
+            <div id="checkout" style="display: none"></div>
+            <div id="billing" style="display: none"></div>
+            <div id="confirmation" style="display: none"></div>
         </main>
-        <br>
-        <br>
-        <br>
-        <button id="console-test">Console Log</button>
 	<script src="index.js" type="module"></script>
     </body>
 </html>
