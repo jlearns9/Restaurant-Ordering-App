@@ -43,7 +43,6 @@ function addToCart(addID) {
     displayFloatingEmojiAnimation(itemToAdd.emoji)
 }
 
-//###################### RENDER MENU ######################//
 function displayMenuItems() {
     menu.innerHTML = menuArray.map(menuItem => `
         <div class='item-container'>
@@ -64,7 +63,6 @@ function calculateTotalPrice() {
     return cart.reduce((sum, cartItem) => sum + cartItem.item.price * cartItem.quantity, 0);
 }
 
-//###################### RENDER CART ######################//
 function displayCartContents() {
     // Map through each cart item to generate its HTML structure.
     const itemsHTML = cart.map(cartItem => `
@@ -107,7 +105,6 @@ function applyDiscount() {
     totalPrice.innerHTML = '$ ' + (calculateTotalPrice() * .9).toFixed(2)
 }
 
-//###################### RENDER CARD DETAILS ######################//
 function displayCardPaymentForm() {
     menu.style.display = 'none' 
     billing.style.display = 'block' 
@@ -123,13 +120,11 @@ function displayCardPaymentForm() {
     </div>`
 } 
 
-//###################### EXIT CART ######################//
 function goBackToMenu() {
     menu.style.display = 'block'
     billing.style.display = 'none'
 }
 
-//###################### REMOVE ITEM ######################//
 function removeItemFromCart(removeID) {
     const itemToRemoveIndex = cart.findIndex(cartItem => cartItem.item.id === parseInt(removeID));
 
@@ -143,17 +138,21 @@ function removeItemFromCart(removeID) {
     }
 }
 
-//###################### RENDER PAYMENT CONFIRMATION ######################//
 function renderOrderConfirmation() {
     confirmation.style.display = 'block'
     menu.style.display = 'block'
     billing.style.display = 'none'
     checkout.style.display = 'none'
+
+    const addButtons = document.querySelectorAll('.add-item-btn')
+    addButtons.forEach(button => {
+        button.style.display = 'none';
+    })
+
     confirmation.innerHTML = `
     <div class='confirmation-container'>Thanks, ${namevalue.value}! Your order is on its way!</div>`
 }
 
-//###################### EMOJI ANIMATION ######################//
 function displayFloatingEmojiAnimation(emojiChar) {
     // Create an emoji element
     const emojiElement = document.createElement('div');
